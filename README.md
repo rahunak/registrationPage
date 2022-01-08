@@ -1,2 +1,1 @@
-# registrationPage
-For https://www.freecodecamp.org/
+# registration Page i want to get certificate from https://www.freecodecamp.org/
