@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="style.css" >
+<title>Registration
+</title>
+</head>
+<body>
+            <header>
+                <h1 id="title">Form Registration</h1>
+                <p id="description">Do you search a job like as developer?
+                    We will help find a job your dream</p>
+            </header>
+            <main>
+                <form id="survey-form" onSubmit={this.submit}>
+                    <fieldset>
+                        <div id="div-name">
+                            <label id="label-name" htmlFor="name">Name</label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your name"
+                                pattern="[\w\d]{0,}[a-zA-Z]{2,}[\w\d]{0,}"
+                                title="name must have a minimum 2 symbols"
+                                required
+                            />
+                        </div>
+                        <div id="div-email">
+                            <label id="label-email" htmlFor="email">Email</label>
+                            <input
+                                type="text"
+                                id="email"
+                                name="email"
+                                pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                title="Email must have @"
+                                placeholder="Enter your email"
+                                required
+                            />
+                        </div>
+                        <div id="div-phone">
+                            <label id="label-phone" htmlFor="number">
+                                Your phone
+                            </label>
+                            <input
+                                title="Enter 10 numbers"
+                                type="tel"
+                                name="phone"
+                                id="number"
+                                pattern="\d*$"
+                                placeholder="Enter only numbers"
+                                onBlur={this.isMoreThan10}
+                            />
+                        </div>
+                        <div id="div-age">
+                            <label id="label-age" htmlFor="age">Your age</label>
+                            <input
+                                min="12"
+                                max="120"
+                                step="1"
+                                name="age"
+                                pattern="\d+"
+                                id="age"
+                                type="number"
+                                placeholder="Not required"
+                            />
+                        </div>
+                        <div id="div-gender">
+                            <label id="label-gender" htmlFor="gender">Your gender</label>
+                            <select id="dropdown" name="Gender" size="1">
+                                <option id="gender-dropdown_text" value="dropdown-text" disabled selected>Select your
+                                    gender
+                                </option>
+                                <option id="gender-male" value="male">Male</option>
+                                <option id="gender-female" value="female">Female</option>
+                                <option id="gender-other" value="other">Other</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <fieldset id="fieldset-looking_job">
+                        <div id="div-looking_job">
+
+
+                            <label id="label-looking_job" htmlFor="fieldset-looking_job"> Do you looking a job</label>
+
+                            <input type="radio" name="looking_job" id="unemployed" value="true"/><label
+                            htmlFor="unemployed">Yes</label>
+                            <input type="radio" name="looking_job" id="working" value="false"/><label
+                            htmlFor="working">No</label>
+
+                        </div>
+                    </fieldset>
+                    <fieldset id="fieldset-skill">
+                        <div id="div-skill">
+                            <label id="label-skill" htmlFor="fieldset-skill">Which technologies do you used? </label>
+
+                            <br/>
+                            <input type="checkbox" name="skill" id="HTML" value="html"/>
+                            <label htmlFor="html">HTML</label>
+                            <br/>
+                            <input type="checkbox" name="skill" id="js" value="js"/>
+                            <label htmlFor="js">JavaScript</label>
+                            <br/>
+                            <input type="checkbox" name="skill" id="css" value="css"/>
+                            <label htmlFor="css">CSS</label>
+                            <br/>
+                            <input type="checkbox" name="skill" id="ruby" value="ruby"/>
+                            <label htmlFor="ruby">Ruby</label>
+                            <br/>
+                            <input type="checkbox" name="skill" id="python" value="python"/>
+                            <label htmlFor="python">Python</label>
+
+
+                        </div>
+                    </fieldset>
+                    <div id="div-comments">
+                        <fieldset>
+                            <label id="label-comments" htmlFor="comments">Additional comments</label>
+                            <br/>
+                            <textarea id="comments" placeholder="Enter your comment here" value="Text">
+
+                        </textarea>
+                        </fieldset>
+                    </div>
+
+
+                    <input id="submit" type="submit" value="Send now" onClick="submitForm(this.form)"/>
+                </form>
+
+
+            </main>
+
+        </body>
+		</html>
+
